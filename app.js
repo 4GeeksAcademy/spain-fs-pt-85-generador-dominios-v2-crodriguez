@@ -10,19 +10,9 @@ window.onload = function() {
     "during my lunch",
     "while I was praying",
   ];
-  for (i = 0; i < who.length; i++) {
-    let var1 = Math.floor(Math.random() * who.length);
-    for (j = 0; j < action.length; j++) {
-        let var2 = Math.floor(Math.random() * action.length)
-        for (k = 0; k < what.length; k++) {
-            let var3 = Math.floor(Math.random() * what.length);
-            for (l = 0; l < when.length; l++) {
-                let var4 = Math.floor(Math.random() * when.length);
-                document.querySelector("#excuse").innerHTML = who[var1] + action[var2] + what[var3] + when[var4];
-            }
-        }
-    }
-    
-  }
-  
-}
+  let var1 = Math.floor(Math.random() * (who.length - 1));
+  let var2 = Math.floor(Math.random() * (action.length - 1));
+  let var3 = Math.floor(Math.random() * (what.length - 1 ));
+  let var4 = Math.floor(Math.random() * (when.length - 1));
+  document.querySelector("#excuse").innerHTML = who[var1] + action[var2] + what[var3] + when[var4];
+}         
